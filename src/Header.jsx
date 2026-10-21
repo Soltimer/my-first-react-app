@@ -1,12 +1,12 @@
 function Header() {
     return (
-        <header className="header">
+        <header className="header container-fluid">
             {/*<img src="logo.png" alt="Company Logo" className="logo" />*/}
             <nav>
-                    <button type="button"><a href="/">Home</a></button>
-                    <button type="button"><a href="/about">About</a></button>
-                    <button type="button"><a href="/services">Services</a></button>
-                    <button type="button"><a href="/contact">Contact</a></button>
+                    <a href="/"         className="btn btn-primary btn-lg">Home</a>
+                    <a href="/about"    className="btn btn-primary btn-lg">About</a>
+                    <a href="/services" className="btn btn-primary btn-lg">Services</a>
+                    <a href="/contact"  className="btn btn-primary btn-lg">Contact</a>
             </nav>
         </header>
     );
