@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Greeting from './components/Greeting'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import './styles/App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Header/>
     <h1>Hello, creature!</h1>
     <Greeting name="Toast" />
+    <Footer/>
     </>
   );
 }
