@@ -1,8 +1,10 @@
+import VisitorCounter from './VisitorCounter'
+
 function Footer() {
     return (
         <footer className="footer p-3 container-fluid">
             <hr/>
-            <p>Made with React.</p>
+            <p><VisitorCounter/> — Made with React.</p>
             <hr/>
         </footer>
     );
