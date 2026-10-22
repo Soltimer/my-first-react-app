@@ -1,5 +1,5 @@
-import './header.css';
-import main_icon from './assets/main_icon_original_size.svg';
+import '../styles/header.css';
+import main_icon from '../assets/main_icon_original_size.svg';
 
 function Header() {
     return (

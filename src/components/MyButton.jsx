@@ -12,4 +12,4 @@ function MyButton(props) {
     );
 }
 
-export default Button;
+export default MyButton;

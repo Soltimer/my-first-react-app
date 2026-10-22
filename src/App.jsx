@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Greeting from './Greeting'
-import Header from './Header'
-import './App.css'
+import Greeting from './components/Greeting'
+import Header from './components/Header'
+import './styles/App.css'
 
 function App() {
   return ( 
