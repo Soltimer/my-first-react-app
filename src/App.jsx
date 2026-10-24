@@ -7,10 +7,11 @@ import './styles/App.css'
 function App() {
   return ( 
     <>
-    <Header/>
-    <h1>Hello, creature!</h1>
-    <Greeting name="Toast" />
-    <Footer/>
+      <Header/>
+        <main className="container my-5 text-center">
+          <Greeting name="Visitor"/>
+        </main>
+      <Footer/>
     </>
   );
 }

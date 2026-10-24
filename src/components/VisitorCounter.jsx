@@ -13,7 +13,7 @@ function VisitorCounter() {
     <button 
       onClick={handleClick} 
       disabled={clicks > 0}
-      className="btn btn-outline-dark btn-sm"
+      className="btn btn-outline-light btn-sm"
     >
       {clicks === 0 
         ? "Click here to be a visitor!" 

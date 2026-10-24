@@ -3,7 +3,7 @@ import main_icon from '../assets/main_icon_original_size.svg';
 
 function Header() {
     return (
-        <header className="header container-fluid">
+        <header className="header container d-flex justify-content-center">
             <nav>
                     <a href="/"><img src={main_icon} alt="Main icon" 
                     className="main_icon border border-5 border-black"/></a>
