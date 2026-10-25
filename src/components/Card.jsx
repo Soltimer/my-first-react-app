@@ -1,9 +1,16 @@
+import error_image from '../assets/error_image.jpg';
+
 function Card(props) {
+  const cardImageCheck = props.src ? props.src : error_image;
+
   return (
     <img 
-      src={props.src} 
-      alt={props.alt} 
-      className="test_image border border-1 border-black" 
+      src={cardImageCheck} 
+      alt={props.alt || "Card image"} 
+      className="image_size border border-1 border-black" 
+      onError={(e) => {
+        e.target.src = error_image;
+      }}
     />
   );
 }
