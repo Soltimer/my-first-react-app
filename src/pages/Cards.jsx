@@ -1,6 +1,6 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Card from '../components/Card'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Card from '../components/Card';
 import mock_data from '../assets/mock_data.json';
 
 function Cards() {
@@ -42,4 +42,4 @@ const columnAlignments = [
   );
 }
 
-export default Cards
+export default Cards;

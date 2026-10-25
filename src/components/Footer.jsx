@@ -1,4 +1,4 @@
-import VisitorCounter from './VisitorCounter'
+import VisitorCounter from './VisitorCounter';
 
 function Footer() {
     return (

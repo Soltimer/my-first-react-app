@@ -1,7 +1,7 @@
-import MyButton from '../components/MyButton'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Card from '../components/Card'
+import MyButton from '../components/MyButton';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Card from '../components/Card';
 import mock_data from '../assets/mock_data.json';
 import { useState } from 'react';
 
@@ -48,10 +48,10 @@ const cards = getCardsFromStorage();
 
   return ( 
     <>
-      <Header />
+      <Header/>
       <main className="container my-5">
         <div className="row justify-content-start g-4">
-          <div className="col-12 col-md-4 text-end">
+            <div className="col-12 col-md-4 text-end">
             <Card src={card1.card_images[0].image_url} alt={card1.name} />
           </div>
           <div className="col-12 col-md-4 text-center text-white">
@@ -69,23 +69,23 @@ const cards = getCardsFromStorage();
             <p>Just refresh (F5) the page</p>
             <p>to get new random cards</p>
           </div>
-          <div className="col-12 col-md-4 text-start">
-            <Card src={card2.card_images[0].image_url} alt={card2.name} />
+            <div className="col-12 col-md-4 text-start">
+            <Card src={card2.card_images[0].image_url} alt={card2.name}/>
           </div>
             <div className="col-12 col-md-4 text-end">
-            <Card src={card3.card_images[0].image_url} alt={card3.name} />
+            <Card src={card3.card_images[0].image_url} alt={card3.name}/>
           </div>
-          <div className="col-12 col-md-4 text-center">
-            <Card src={card4.card_images[0].image_url} alt={card4.name} />
+            <div className="col-12 col-md-4 text-center">
+            <Card src={card4.card_images[0].image_url} alt={card4.name}/>
           </div>
-        <div className="col-12 col-md-4 text-start">
-            <Card src={card5.card_images[0].image_url} alt={card5.name} />
+            <div className="col-12 col-md-4 text-start">
+            <Card src={card5.card_images[0].image_url} alt={card5.name}/>
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 }
 
-export default RandomBattle
+export default RandomBattle;

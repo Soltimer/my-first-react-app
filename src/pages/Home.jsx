@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Greeting from '../components/Greeting'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Card from '../components/Card'
-import '../styles/App.css'
+import Greeting from '../components/Greeting';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Card from '../components/Card';
+import '../styles/App.css';
 import mock_data from '../assets/mock_data.json';
 
 function Home() {
@@ -56,13 +56,13 @@ function Home() {
       <Header/>
       <main className="container my-5">
         <div className="row justify-content-center g-4">
-          <div className="col-12 col-md-4 text-end">
+            <div className="col-12 col-md-4 text-end">
             <Card src={random_card1.card_images[0].image_url} alt={random_card1.name} />
           </div>
-          <div className="col-12 col-md-4 text-left">
+            <div className="col-12 col-md-4 text-left">
             <Greeting name="Visitor" />
           </div>
-          <div className="col-12 col-md-4 text-start">
+            <div className="col-12 col-md-4 text-start">
             <Card src={random_card2.card_images[0].image_url} alt={random_card2.name} />
           </div>
         </div>
@@ -72,4 +72,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
