@@ -7,7 +7,7 @@ function Card(props) {
     <img 
       src={cardImageCheck} 
       alt={props.alt || "Card image"} 
-      className="image_size border border-1 border-black" 
+      className="image_size border border-3 border-black rounded" 
       onError={(e) => {
         e.target.src = error_image;
       }}
