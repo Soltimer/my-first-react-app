@@ -4,16 +4,14 @@ import Card from '../components/Card'
 import mock_data from '../assets/mock_data.json';
 
 function Cards() {
-  let cards = JSON.parse(localStorage.getItem('mock_data'));
-  if (!cards) {
-    console.log('Card data not found in localStorage, attempting to load it again.');
-    localStorage.setItem('mock_data', JSON.stringify(mock_data));
-    cards = mock_data;
-} else {
-  console.log('Card data loaded succesfully from localStorage!');
-}
+    const getCardsFromStorage = () => {
+        const data = localStorage.getItem('ygopro_cards');
+        return data ? JSON.parse(data) : mock_data.data;
+};
   
-const shuffledCards = [...mock_data.data].sort(() => 0.5 - Math.random());
+const cards = getCardsFromStorage();
+
+const shuffledCards = [...cards].sort(() => 0.5 - Math.random());
 const randomNineCards = shuffledCards.slice(0, 9);
 const columnAlignments = [
     'justify-content-end',

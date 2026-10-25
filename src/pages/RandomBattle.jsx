@@ -6,36 +6,34 @@ import mock_data from '../assets/mock_data.json';
 import { useState } from 'react';
 
 function RandomBattle() {
-  let cards = JSON.parse(localStorage.getItem('mock_data'));
-  if (!cards) {
-    console.log('Card data not found in localStorage, attempting to load it again.');
-    localStorage.setItem('mock_data', JSON.stringify(mock_data));
-    cards = mock_data;
-} else {
-  console.log('Card data loaded succesfully from localStorage!');
-}
+    const getCardsFromStorage = () => {
+        const data = localStorage.getItem('ygopro_cards');
+        return data ? JSON.parse(data) : mock_data.data;
+};
+  
+const cards = getCardsFromStorage();
 
     const [showScore, setShowScore] = useState(false);
 
     const [card1] = useState(() => {
-        const randomIndex = Math.floor(Math.random() * cards.data.length);
-        return cards.data[randomIndex];
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        return cards[randomIndex];
     });
     const [card2] = useState(() => {
-        const randomIndex = Math.floor(Math.random() * cards.data.length);
-        return cards.data[randomIndex];
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        return cards[randomIndex];
     });
     const [card3] = useState(() => {
-        const randomIndex = Math.floor(Math.random() * cards.data.length);
-        return cards.data[randomIndex];
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        return cards[randomIndex];
     });
     const [card4] = useState(() => {
-        const randomIndex = Math.floor(Math.random() * cards.data.length);
-        return cards.data[randomIndex];
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        return cards[randomIndex];
     });
     const [card5] = useState(() => {
-        const randomIndex = Math.floor(Math.random() * cards.data.length);
-        return cards.data[randomIndex];
+        const randomIndex = Math.floor(Math.random() * cards.length);
+        return cards[randomIndex];
     }); 
     
     const getAtk = (card) => isNaN(card.atk) ? 0 : Number(card.atk);
