@@ -14,27 +14,32 @@ function Cards() {
   console.log('Card data loaded succesfully from localStorage!');
 }
   
-  const random_card_number1 = Math.floor(Math.random() * cards.data.length);
-  const random_card_number2 = Math.floor(Math.random() * cards.data.length);
-  const random_card1 = cards.data[random_card_number1];
-  const random_card2 = cards.data[random_card_number2];
-  
+const shuffledCards = [...mock_data.data].sort(() => 0.5 - Math.random());
+const randomNineCards = shuffledCards.slice(0, 9);
+const columnAlignments = [
+    'justify-content-end',
+    'justify-content-center',
+    'justify-content-start'
+  ];
+
   return ( 
     <>
       <Header />
-      <main className="container my-5">
-        <div className="row justify-content-center g-4">
-          <div className="col-12 col-md-4 text-end">
-            <Card src={random_card1.card_images[0].image_url} alt={random_card1.name} />
-          </div>
-          <div className="col-12 col-md-4 text-left">
-            <Greeting name="Visitor" />
-          </div>
-          <div className="col-12 col-md-4 text-start">
-              <Card src={random_card2.card_images[0].image_url} alt={random_card2.name} />
-          </div>
-        </div>
-      </main>
+        <main className="container my-5">
+            <div className="row g-4">
+                {randomNineCards.map((card, index) => (
+                <div 
+                    key={card.id} 
+                    className={`col-12 col-md-4 d-flex ${columnAlignments[index % 3]}`}
+                >
+                    <Card 
+                    src={card.card_images[0].image_url} 
+                    alt={card.name} 
+                    />
+                </div>
+                ))}
+            </div>
+        </main>
       <Footer />
     </>
   );
