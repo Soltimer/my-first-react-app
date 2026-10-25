@@ -1,6 +1,8 @@
 function MyButton(props) {
     return (
-        <button style=
+        <button 
+        onClick={props.onClick}
+        style=
         {{
         color: props.color, 
         boxShadow: `0 0 ${props.shadowSize}px gray`,
