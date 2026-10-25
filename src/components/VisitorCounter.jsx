@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function VisitorCounter() {
   const [clicks, setClicks] = useState(0);

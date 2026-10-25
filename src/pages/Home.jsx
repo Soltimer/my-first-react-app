@@ -26,7 +26,7 @@ function Home() {
           localStorage.setItem('ygopro_cards', JSON.stringify(result.data));
           setCards(result.data);
         } catch (error) {
-          console.error('API fetch failed, using backup mock_data:', error);
+          console.error('API fetch failed, using backup mock_data', error);
           localStorage.setItem('ygopro_cards', JSON.stringify(mock_data.data));
           setCards(mock_data.data);
         } finally {
@@ -57,13 +57,13 @@ function Home() {
       <main className="container my-5">
         <div className="row justify-content-center g-4">
             <div className="col-12 col-md-4 text-end">
-            <Card src={random_card1.card_images[0].image_url} alt={random_card1.name} />
+            <Card src={random_card1.card_images[0].image_url} alt={random_card1.name}/>
           </div>
             <div className="col-12 col-md-4 text-left">
-            <Greeting name="Visitor" />
+            <Greeting name="Visitor"/>
           </div>
             <div className="col-12 col-md-4 text-start">
-            <Card src={random_card2.card_images[0].image_url} alt={random_card2.name} />
+            <Card src={random_card2.card_images[0].image_url} alt={random_card2.name}/>
           </div>
         </div>
       </main>
