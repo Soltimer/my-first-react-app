@@ -6,9 +6,9 @@ import RandomBattle from "./pages/RandomBattle";
 function App() {
   return ( 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Cards" element={<Cards />} />
-        <Route path="/RandomBattle" element={<RandomBattle />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/Cards" element={<Cards/>}/>
+        <Route path="/RandomBattle" element={<RandomBattle/>}/>
       </Routes>
   );
 }
