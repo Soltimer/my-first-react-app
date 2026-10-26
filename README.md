@@ -1,16 +1,13 @@
-# React + Vite
+README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Yu-Gi-Oh! Card Site
+A React web application built with Vite and Bootstrap.
+Github Pages link
+https://soltimer.github.io/my-first-react-app/
 
-Currently, two official plugins are available:
+INSTALL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+If you wish to clone this repository and then run the application or continue development, you need to have Node.js installed from (https://nodejs.org/en) and then do the following on the command prompt (CMD) on the project folder on your pc:
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install
+npm run dev
